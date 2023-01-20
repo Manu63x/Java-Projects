@@ -1,0 +1,52 @@
+import javax.swing.*;
+import java.awt.*;
+public class Calcolatrice extends JFrame{
+    JTextField txt = new JTextField();
+    JPanel northPnl = new JPanel();
+    JPanel midPnl = new JPanel();
+    JPanel southPnl = new JPanel();
+    JButton btn0 = new JButton("0");
+    JButton btn1 = new JButton("1");
+    JButton btn2 = new JButton("2");
+    JButton btn3 = new JButton("3");
+    JButton btn4 = new JButton("4");
+    JButton btn5 = new JButton("5");
+    JButton btn6 = new JButton("6");
+    JButton btn7 = new JButton("7");
+    JButton btn8 = new JButton("8");
+    JButton btn9 = new JButton("9");
+    JButton btneq = new JButton("=");
+    JButton btnpl = new JButton("+");
+    JButton btnmin = new JButton("-");
+    JButton btnmul = new JButton("x");
+    JButton btndiv = new JButton(":");
+    public Calcolatrice(){
+        super("Calcolatrice");
+        northPnl.setLayout(new FlowLayout());
+        midPnl.setLayout(new GridLayout(4,3));
+        southPnl.setLayout(new FlowLayout());
+        northPnl.add(txt);
+        midPnl.add(btn7);
+        midPnl.add(btn8);
+        midPnl.add(btn9);
+        midPnl.add(btn4);
+        midPnl.add(btn5);
+        midPnl.add(btn6);
+        midPnl.add(btn1);
+        midPnl.add(btn2);
+        midPnl.add(btn3);
+        midPnl.add(btn0);
+        southPnl.add(btnpl);
+        southPnl.add(btnmin);
+        southPnl.add(btnmul);
+        southPnl.add(btndiv);
+        southPnl.add(btneq);
+        getContentPane().add(northPnl, BorderLayout.NORTH);
+        getContentPane().add(midPnl, BorderLayout.CENTER);
+        getContentPane().add(southPnl, BorderLayout.SOUTH);
+        pack();
+        setSize(600,400);
+        setVisible(true);
+        setResizable(true);
+    }
+}
